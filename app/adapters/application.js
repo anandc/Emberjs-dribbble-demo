@@ -7,7 +7,7 @@ export default DS.RESTAdapter.extend({
 			'Authorization': 'Bearer 23c75e295928229ca4f87528ec8e0beff6c32362b422f490693635b15816d029'
 		}
 	}, {
-	shouldReloadAll: function () {
-		return true;
+	shouldReloadAll(store, snapshot) { 
+		return store.peekAll( snapshot.type.modelName ).get("length") <= 0;
 	}
 });

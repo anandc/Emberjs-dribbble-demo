@@ -13,6 +13,7 @@ export default Ember.Component.extend({
         	geocodeAddress(geocoder, map, shot.get('user').location, i);
         });
         function geocodeAddress(geocoder, resultsMap, location, i) {
+        	// Google map throw query_limit error if too many request were made with in a shot span of time
         	setTimeout(function () {
         		geocoder.geocode({'address': location}, function(results, status) {
 				if (status === window.google.maps.GeocoderStatus.OK) {
@@ -41,7 +42,7 @@ export default Ember.Component.extend({
 		}
         window.google.maps.event.addDomListener(window, 'resize', function() {
         	let winWidth = event.target.innerWidth;
-        	if(winWidth < 750) {
+        	if(winWidth < 750) { // resize map for smaller screen size
         		$('.map-canvas').width(winWidth - 50);
         	}
 		    window.google.maps.event.trigger(map, 'resize');

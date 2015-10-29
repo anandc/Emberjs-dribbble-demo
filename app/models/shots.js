@@ -1,3 +1,6 @@
+/**
+* Data structure for shots, note ember automatically adds id
+**/
 import DS from 'ember-data';
 
 export default DS.Model.extend({
