@@ -1,3 +1,6 @@
+/**
+* This class contains the router for the application
+**/
 import Ember from 'ember';
 import config from './config/environment';
 
