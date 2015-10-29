@@ -18,7 +18,13 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-
+  ENV.contentSecurityPolicy = {  
+    'script-src': "'self' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com",
+    'img-src': "'self' *",
+    'font-src': "'self' https://*.gstatic.com",
+    'style-src': "'self' 'unsafe-inline' https://*.googleapis.com",
+    'connect-src': "'self' 'connect-src' https://api.dribbble.com"
+  };
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;

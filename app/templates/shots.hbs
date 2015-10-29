@@ -1,0 +1,27 @@
+{{outlet}}
+{{!-- InfoWindow markup, belongs to map component,but for better readability placed here --}}
+<div class="hidden">
+	{{#each model as |shot|}}
+		<section>
+			<h4>Top</h4>
+			<img src="{{shot.images.teaser}}">
+			<ul class="tools group">
+				<li class="">{{shot.attachments_count}}</li>
+				<li class="views">{{shot.views_count}}</li>
+				<li class="fav">{{shot.likes_count}}</li>
+				<li class="cmnt">{{shot.comments_count}}</li>
+			</ul>
+			<div class="avatarCntnr">
+				<img src="{{shot.user.avatar_url}}">
+				<ul>
+					<li>{{shot.user.name}}</li>
+					<li>{{shot.user.location}}</li>
+				</ul>
+			</div>
+		</section>
+	{{/each}}
+</div>
+{{#if model.length}}
+	{{google-map data=model}}
+{{/if}}
+

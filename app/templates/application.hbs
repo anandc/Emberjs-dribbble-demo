@@ -1,3 +1,19 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<section class="main container-fluid">
+ 	<header>
+ 		<h3>Dribbbler</h3>
+ 		<h4>Designers</h4>
+ 	</header>
+ 	<div class="searchCntnr">
+ 		<aside>
+	 		{{input enter="search" aria-controls="existing-user-table" placeholder="Search designer" class=" input-lg" id="new-todo"}}
+	 	 	<button type="button" class="btn btn-info" {{action "search" data=shots}}>
+		      <span class="glyphicon glyphicon-search"></span>
+		    </button>
+	    </aside>
+    </div>
+	{{outlet}}
+	<footer class="container-fluid">
+		This is a footer
+	</footer>
+ 	
+</section>
