@@ -1,7 +1,8 @@
 # Designer-app
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is just a demo application for learning ember-cli
+
+The main goal is to fetch the data from dribbble API using REST and show the top5 popular shot's user location in google map as marked. Clicking on the marker should pops up info window with user details.
 
 ## Prerequisites
 
