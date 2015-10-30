@@ -6,7 +6,9 @@
 			<h4>Top</h4>
 			<img src="{{shot.images.teaser}}">
 			<ul class="tools group">
-				<li class="">{{shot.attachments_count}}</li>
+				{{#if shot.attachments_count}}
+					<li class="glyphicon glyphicon-paperclip"></li>
+				{{/if}}
 				<li class="views">{{shot.views_count}}</li>
 				<li class="fav">{{shot.likes_count}}</li>
 				<li class="cmnt">{{shot.comments_count}}</li>
