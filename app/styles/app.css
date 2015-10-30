@@ -94,23 +94,20 @@ ul {
     float: left;
 }
 ul.tools li.fav {
-	background-image: url("/fav.png");
-    background-repeat: no-repeat;
     padding-left: 15px;
     margin-left: 10px;
 }
 ul.tools li.cmnt {
-	background-image: url("/cmnt.png");
-    background-repeat: no-repeat;
     padding-left: 15px;
     margin-left: 10px;
 }
 ul.tools li.views {
-	background-image: url("/view.png");
-    background-repeat: no-repeat;
     padding-left: 15px;
     margin-left: 50px;
 }
 .error {
 	border: 2px dashed red;
+}
+.glyphicon-eye-open:before, .glyphicon-heart:before, .glyphicon-comment:before, .glyphicon-paperclip:before{
+    padding-right: 2px
 }

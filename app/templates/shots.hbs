@@ -9,9 +9,9 @@
 				{{#if shot.attachments_count}}
 					<li class="glyphicon glyphicon-paperclip"></li>
 				{{/if}}
-				<li class="views">{{shot.views_count}}</li>
-				<li class="fav">{{shot.likes_count}}</li>
-				<li class="cmnt">{{shot.comments_count}}</li>
+				<li class="views glyphicon glyphicon-eye-open">{{shot.views_count}}</li>
+				<li class="fav glyphicon glyphicon-heart">{{shot.likes_count}}</li>
+				<li class="cmnt glyphicon glyphicon-comment">{{shot.comments_count}}</li>
 			</ul>
 			<div class="avatarCntnr">
 				<img src="{{shot.user.avatar_url}}">
