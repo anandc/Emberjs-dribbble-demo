@@ -1,3 +1,6 @@
+/**
+* Map component send request to google map api and shows the map
+**/
 import Ember from 'ember';
 
 export default Ember.Component.extend({  

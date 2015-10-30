@@ -1,3 +1,6 @@
+/**
+* Describes the configuration for adapter
+**/
 import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({

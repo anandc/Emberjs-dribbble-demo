@@ -1,3 +1,6 @@
+/**
+* Creates an array transform so can use it in model as DS.attr('array')
+**/
 import DS from 'ember-data';
 
 export default DS.Transform.extend({
