@@ -9,9 +9,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('shots', {path: '/'});
-  this.route('users', {path: 'users/:id'}, function() {
-    this.route('usershots', {path: 'shots'});
-  });
+    this.route('shots', {path: '/'});
+    this.route('users', {path: 'users/:id'}, function() {
+      this.route('usershots', {path: 'shots'});
+      this.route('shotdetail', {path: 'shots/:shot_id'});
+    });
 });
 export default Router;

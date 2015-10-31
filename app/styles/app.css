@@ -105,6 +105,18 @@ ul.tools li.views {
     padding-left: 15px;
     margin-left: 50px;
 }
+.usershots ul.tools li.views {
+    margin-left: 32px;
+    padding-left: 10px;
+}
+.usershots ul.tools li.fav {
+    margin-left: 0;
+    padding-left: 10px;
+}
+.usershots ul.tools li.cmnt {
+    margin-left: 0;
+    padding-left: 10px;
+}
 .error {
 	border: 2px dashed red;
 }
@@ -114,20 +126,17 @@ ul.tools li.views {
 .usershots .container-fluid {
     max-width: 900px;
 }
-.userDetailsCntnr>aside {
-    max-width: 160px;
-    max-height: 160px;
+.userDetailsCntnr aside {
     display: inline-block;
+}
+.userDetailsCntnr>aside {
     margin-left: 15px;
 }
 .userDetailsCntnr>aside img {
     border-radius: 10px;
 }
-.userDetailsCntnr>aside+aside {
-    display: inline-block;
-    width: auto;
-}
-.userDetailsCntnr>aside+aside h4{
+
+.userDetailsCntnr>aside+aside h4, .userDetailsCntnr>aside+aside ul li {
     display: inline-block;
     margin-right: 5px;
 }
@@ -148,4 +157,18 @@ ul.tools li.views {
     margin: auto;
     padding-top: 15px;
     border-style: groove;
+}
+.shotdetail figure img {
+    width: 100%
+}
+.shotdetail ul {
+    float: right;
+    display: inline-block;
+    padding-right: 10px;
+}
+.shotdetail h4 {
+    display: inline-block;
+}
+.shotdetail {
+    padding: 15px;
 }

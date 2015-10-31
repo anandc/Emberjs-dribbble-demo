@@ -4,9 +4,22 @@
 		<div class="row">
 		{{#each model as |shot|}}      
 			<div class="col-sm-4">
-				<img src="{{shot.images.teaser}}">
+				{{#link-to 'users.shotdetail' shot}}
+					<img src="{{shot.images.teaser}}">
+				{{/link-to}}
+				<ul class="tools group">
+					{{#if shot.attachments_count}}
+						<li class="glyphicon glyphicon-paperclip"></li>
+					{{else}}
+						<li>&nbsp;</li>
+					{{/if}}
+					<li class="views glyphicon glyphicon-eye-open">{{shot.views_count}}</li>
+					<li class="fav glyphicon glyphicon-heart">{{shot.likes_count}}</li>
+					<li class="cmnt glyphicon glyphicon-comment">{{shot.comments_count}}</li>
+				</ul>
 			</div>
 		{{/each}}
 		</div>
 	</div>
-</section>
+</section> 
+{{outlet}}

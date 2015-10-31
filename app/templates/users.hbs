@@ -5,8 +5,9 @@
 	<aside>
 		<h4>{{model.name}}</h4>{{#if model.pro}}<span>PRO</span>{{/if}}
 		<ul>
-			<li></li>
-			<li>{{model.location}}</li>
+			<li class="glyphicon glyphicon-map-marker">{{model.location}}</li>
+			<li class="glyphicon glyphicon-globe">{{model.links.web}}</li>
+			<li class="glyphicon glyphicon-social-twitter">{{model.links.twitter}}</li>
 		</ul>
 	</aside>
 	{{outlet}}

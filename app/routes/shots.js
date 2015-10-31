@@ -4,9 +4,11 @@
 * After model gets populated redirect to shots view.
 **/
 import Ember from 'ember';
+import ApplicationAdapter from '../adapters/application';
 
 export default Ember.Route.extend({
 	model() {
+        ApplicationAdapter.prototype.namespace = 'v1';
         return this.store.findAll('shots');// populates model
     },
     actions: { /// defined action for user interaction, will be called from shots template

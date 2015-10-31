@@ -1,0 +1,16 @@
+{{outlet}}
+<section class="shotdetail">
+	<h4>{{model.title}}</h4>
+	<ul class="tools group">
+		{{#if model.attachments_count}}
+			<li class="glyphicon glyphicon-paperclip"></li>
+		{{/if}}
+		<li class="views glyphicon glyphicon-eye-open">{{model.views_count}}</li>
+		<li class="fav glyphicon glyphicon-heart">{{model.likes_count}}</li>
+		<li class="cmnt glyphicon glyphicon-comment">{{model.comments_count}}</li>
+	</ul>
+	<figure>
+		<img src="{{model.images.hidpi}}">
+	</figure>
+</section>
+

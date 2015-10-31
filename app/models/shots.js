@@ -11,5 +11,6 @@ export default DS.Model.extend({
   	attachments_count: DS.attr(),
   	views_count: DS.attr(),
   	likes_count: DS.attr(),
-  	comments_count: DS.attr()
+  	comments_count: DS.attr(),
+  	title: DS.attr()
 });
