@@ -1,0 +1,13 @@
+<div class="userDetailsCntnr">
+	<aside>
+		<img src="{{model.avatar_url}}">
+	</aside>
+	<aside>
+		<h4>{{model.name}}</h4>{{#if model.pro}}<span>PRO</span>{{/if}}
+		<ul>
+			<li></li>
+			<li>{{model.location}}</li>
+		</ul>
+	</aside>
+	{{outlet}}
+</div>

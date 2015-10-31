@@ -13,7 +13,7 @@ export default Ember.Component.extend({
         geocoder = new window.google.maps.Geocoder(),
     	infowindowEl = $('div.hidden section');
         shots.forEach(function (shot, i) {
-        	geocodeAddress(geocoder, map, shot.get('user').location, i);
+        	geocodeAddress(geocoder, map, shot.get('user').get('location'), i);
         });
         function geocodeAddress(geocoder, resultsMap, location, i) {
         	// Google map throw query_limit error if too many request were made with in a shot span of time

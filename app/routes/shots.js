@@ -12,16 +12,16 @@ export default Ember.Route.extend({
     actions: { /// defined action for user interaction, will be called from shots template
         search: function(val) {
             val = val || $('#new-todo').val();
-            var shots = this.store.all('shots'),
+            var shots = this.store.peekAll('shots'),//store.all is deprecated so use peekAll
                 user;
             shots.forEach(function (shot) {
-                if (shot.get('user').name.toLowerCase() === val.toLowerCase()) {
+                if (shot.get('user').get('name').toLowerCase() === val.toLowerCase()) {
                     user = shot.get('user');
                     return;
                 }
             });
             if (user) {
-                this.transitionTo('/users/' + user.id);
+                this.transitionTo('users.usershots', user);
             } else {
                 $('#new-todo').addClass("error");
             }

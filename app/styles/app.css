@@ -111,3 +111,41 @@ ul.tools li.views {
 .glyphicon-eye-open:before, .glyphicon-heart:before, .glyphicon-comment:before, .glyphicon-paperclip:before{
     padding-right: 2px
 }
+.usershots .container-fluid {
+    max-width: 900px;
+}
+.userDetailsCntnr>aside {
+    max-width: 160px;
+    max-height: 160px;
+    display: inline-block;
+    margin-left: 15px;
+}
+.userDetailsCntnr>aside img {
+    border-radius: 10px;
+}
+.userDetailsCntnr>aside+aside {
+    display: inline-block;
+    width: auto;
+}
+.userDetailsCntnr>aside+aside h4{
+    display: inline-block;
+    margin-right: 5px;
+}
+.userDetailsCntnr>aside+aside ul{
+    padding: 0;
+    color: #aaa;
+}
+.userDetailsCntnr>aside+aside span{
+    font-size: 11px;
+    background-color: #aaa;
+    color: white;
+    padding: 2px;
+    border-radius: 2px;
+}
+.userDetailsCntnr {
+    background-color: white;
+    width: 85%;
+    margin: auto;
+    padding-top: 15px;
+    border-style: groove;
+}

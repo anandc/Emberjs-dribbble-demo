@@ -1,8 +1,8 @@
-/**
-* serialiser for processing the data returned from REST Api
-**/
 import DS from 'ember-data';
 
 export default DS.JSONSerializer.extend(DS.EmbeddedRecordsMixin, {
-	isNewSerializerAPI : true
+	isNewSerializerAPI : true,
+	attrs: {
+		user: { embedded: 'always' }
+	}
 });
