@@ -4,7 +4,9 @@
 	{{#each model as |shot|}}
 		<section>
 			<h4>Top</h4>
-			<img src="{{shot.images.teaser}}">
+			<a href="javascript:void()">
+			<img src="{{shot.images.teaser}}" {{action 'showdetail' shot}}>
+			</a>
 			<ul class="tools group">
 				{{#if shot.attachments_count}}
 					<li class="glyphicon glyphicon-paperclip"></li>
