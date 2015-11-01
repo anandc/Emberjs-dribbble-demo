@@ -27,9 +27,6 @@ export default Ember.Route.extend({
             } else {
                 $('#new-todo').addClass("error");
             }
-        },
-        showdetail: function (shot){
-            this.transitionTo('users.usershots', shot.get('user'));
         }
     }
 });
