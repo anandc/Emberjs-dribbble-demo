@@ -2,9 +2,10 @@ import Ember from 'ember';
 import ApplicationAdapter from '../../adapters/application';
 
 export default Ember.Route.extend({
-	model() {
-		let user_id = this.store.peekAll('user').get('firstObject').get('id');
+	model(params, transition) {
+		let user_id = transition.resolvedModels.users.get('id');
 		ApplicationAdapter.prototype.namespace = 'v1/users/' + user_id; 
+		this.store.unloadAll('shots')
         return this.store.findAll('shots');
     }
 });
