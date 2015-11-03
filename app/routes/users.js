@@ -6,7 +6,7 @@ export default Ember.Route.extend({
 		//This will not be called if transition is via shots as model is passed and mode hook doesnot execute.
 		// Then why we need this code ?
 		// If the user reloads the url, then we need to fetch user based on the dynamic segment.
-		ApplicationAdapter.reopen({
+		ApplicationAdapter.prototype.reopen({
 			namespace: 'v1'
 		});
         return this.store.find('user', params.id);

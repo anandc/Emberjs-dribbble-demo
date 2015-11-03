@@ -8,7 +8,7 @@ import ApplicationAdapter from '../adapters/application';
 
 export default Ember.Route.extend({
 	model() {
-		ApplicationAdapter.reopen({
+		ApplicationAdapter.prototype.reopen({
 			namespace: 'v1'
 		});
 		this.store.unloadAll('shots');
