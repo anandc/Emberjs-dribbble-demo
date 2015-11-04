@@ -10,8 +10,5 @@ export default Ember.Route.extend({
 			namespace: 'v1'
 		});
         return this.store.find('user', params.id);
-    },
-	afterModel: function(user) {
-		this.transitionTo('users.usershots', user.get('id'));
-	}
+    }
 });

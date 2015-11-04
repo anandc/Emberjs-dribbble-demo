@@ -4,7 +4,7 @@
 	{{#each model as |shot|}}
 			<section>
 				<h4>Top</h4>
-				{{#link-to 'users.usershots' shot.user}}
+				{{#link-to 'users.shotdetail' shot.user shot.id}}
 					<img src="{{shot.images.teaser}}">
 				{{/link-to}}
 				<ul class="tools group">
